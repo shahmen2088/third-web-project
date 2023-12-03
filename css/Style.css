@@ -1,0 +1,992 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.page {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+/* Container  */
+.container {
+    width: 100%;
+    max-width: 1326px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Header  */
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 0 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.header__fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #e9e7e7;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-burger__header {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    display: none;
+    margin-left: 10px;
+    font-size: 0;
+    cursor: pointer;
+    color: transparent;
+}
+
+.menu-burger__header span,
+.menu-burger__header:after,
+.menu-burger__header:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #515758;
+    margin: 0 auto;
+}
+
+.menu-burger__header:after,
+.menu-burger__header:before {
+    content: '';
+}
+
+.menu-burger__header span {
+    top: 16px;
+}
+
+.menu-burger__header:after {
+    bottom: 5px;
+}
+
+.menu-burger__header:before {
+    top: 5px;
+}
+
+.menu-burger__header.open-menu span {
+    opacity: 0;
+    transition: .1s;
+}
+
+.menu-burger__header.open-menu:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: .1s;
+}
+
+.menu-burger__header.open-menu:after {
+    transform: rotate(-38deg);
+    top: 16px;
+    transition: .1s;
+}
+
+
+/* Button  */
+
+.button {
+    display: block;
+    text-decoration: none;
+    padding: 17px 50px;
+    margin: 0 auto;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: #333;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .1s linear;
+}
+
+.button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Nav  */
+.nav {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 70px;
+    text-decoration: none;
+    color: #333;
+    transition: color .1s linear;
+}
+
+.nav__link:hover {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Intro  */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../img/1.Page/Background.png") center no-repeat;
+    background-size: cover;
+}
+
+.intro__item {
+    width: 50%;
+}
+
+.intro__inner {
+    display: flex;
+    padding-top: 140px;
+    padding-bottom: 50px;
+}
+
+.intro__picture {
+    overflow: hidden;
+}
+
+.intro__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.intro__name {
+    font-family: "Cardo", sans-serif;
+    font-size: 81px;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 140px;
+}
+
+.intro__description {
+    margin-right: 140px;
+    margin-bottom: 40px;
+}
+
+.intro__button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 17px 50px;
+    margin: 0 auto;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+    transition: color .1s linear;
+}
+
+.intro__button:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+/* Memories  */
+
+.memories {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 387px;
+    background: url("../img/2.Page/Background.png") center no-repeat;
+    background-size: cover;
+}
+
+.memories__inner {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    width: 440px;
+}
+
+.memories__name {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 1;
+}
+
+.memories__button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 17px 50px;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .1s linear;
+}
+
+.memories__button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Gallery  */
+
+.gallery {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background: url("../img/3.Page/Background.png") center no-repeat;
+    background-size: cover;
+}
+
+.gallery__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery__item {
+    width: 28.3333%;
+    text-align: left;
+}
+
+.gallery__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.gallery__name {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.gallery__name::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 30px;
+}
+
+/* Preview  */
+
+.preview {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 819px;
+    background: url("../img/4.Page/Background.png") center no-repeat;
+    background-size: cover;
+}
+
+.preview__inner {
+    margin: 0 auto;
+    width: 916px;
+}
+
+.preview__item {
+    text-align: center;
+}
+
+.preview__name {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 98px;
+    line-height: 1;
+    margin-bottom: 80px;
+}
+
+.preview__name span {
+    text-decoration: underline;
+}
+
+.preview__text {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.preview__airplaneLogo {
+    font-size: 90px;
+}
+
+/* Places  */
+
+.places {
+    padding: 100px 0;
+    background: url("../img/5.Page/Background.png") center no-repeat;
+    background-size: cover;
+}
+
+.places__inner {
+    display: flex;
+}
+
+.places__item {
+    width: 50%;
+    margin-right: 40px;
+}
+
+.places__item:last-child {
+    margin-right: 0;
+}
+
+.place__description {
+    display: flex;
+    align-items: center;
+}
+
+.place__name {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-decoration: underline;
+    line-height: 1.4;
+    margin-right: 20px;
+}
+
+.place__imgM {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.place__imgR {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Story  */
+
+.story {
+    width: 100%;
+    height: 819px;
+    background: #232323;
+    padding: 100px 0;
+}
+
+.story__inner {
+    display: flex;
+}
+
+.story__item {
+    width: 50%;
+    margin-right: 110px;
+}
+
+.story__item:last-child {
+    margin-right: 0;
+    align-self: center;
+}
+
+.story__description {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 1;
+    color: #fff;
+
+    margin-bottom: 80px;
+}
+
+.story__name {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.story__text {
+    color: #fff;
+}
+
+.story__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Flights */
+
+.flights {
+    width: 100%;
+    height: 819px;
+    background: #e9e7e7;
+    padding: 100px 0;
+}
+
+.flights__inner {
+    display: flex;
+}
+
+.flights__name {
+    font-family: "Cardo", sans-serif;
+    font-weight: bold;
+    font-size: 81px;
+    line-height: 1;
+
+    margin-bottom: 70px;
+}
+
+.flights__info {
+    border-top: 3px solid#232323;
+    padding: 20px 40px;
+}
+
+.flights__info:last-child {
+    border-bottom: 3px solid#232323;
+}
+
+.flights__item {
+    width: 65%;
+    margin-right: 60px;
+}
+
+.flights__item--picture {
+    width: 35%;
+}
+
+.flights__item:last-child {
+    margin-right: 0;
+}
+
+.flights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Comments  */
+
+.comments {
+    width: 100%;
+    height: 819px;
+    padding: 100px 0;
+}
+
+.comments__name {
+    font-family: 'Cardo', sans-serif;
+    font-weight: bold;
+    font-size: 81px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    text-align: center;
+    line-height: 1;
+    color: #232323;
+    width: 700px;
+}
+
+.comments__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments__item {
+    width: 392px;
+    height: 427px;
+    border: 3px solid #232323;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.comments__photo {
+    padding: 72px 100px 40px;
+}
+
+.comments__author {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+.comments__text {
+    font-size: 17px;
+    color: #6d6d6d;
+    line-height: 21px;
+    padding: 0 40px;
+
+
+}
+
+/* Form */
+
+.form {
+    height: 100%;
+    padding: 70px 0;
+    background: #e9e7e7;
+}
+
+.form__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__item {
+    width: 50%;
+    margin-right: 80px;
+}
+
+.form__name {
+    text-align: center;
+    margin-bottom: 35px;
+    line-height: 1;
+}
+
+.form__item:last-child {
+    margin-right: 0;
+}
+
+.form__name {
+    font-family: 'Cardo', sans-serif;
+    font-weight: bold;
+    font-size: 81px;
+}
+
+.form__info {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+
+.form__info-item::placeholder {
+    color: #333;
+}
+
+.form__info-item {
+    width: 100%;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+    border: 3px solid #232323;
+
+    font-size: 21px;
+    background: #e9e7e7;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.button__form {
+    display: block;
+    text-decoration: none;
+    padding: 17px 50px;
+    max-width: 578px;
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+    transition: color .1s linear;
+}
+
+.button__form:hover {
+    background-color: transparent;
+    color: #000000;
+}
+
+.form__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+
+.footer {
+    padding: 70px 0;
+    background: #c4c4c4;
+}
+
+.footer__inner {
+    display: flex;
+}
+
+.footer__item {
+    margin-right: 100px;
+}
+
+.footer__item:last-child {
+    margin-right: 0;
+}
+
+.footer__name {
+    font-family: 'Cardo', sans-serif;
+    font-size: 63px;
+    font-weight: bold;
+    line-height: 1;
+    width: 100%;
+    max-width: 240px;
+}
+
+.footer__links h2 {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.footer__links--inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.footer__link {
+    width: 25%;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer__vault {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+/* Медиа запросы */
+
+/* Large desktop */
+@media (max-width: 1200px) {
+
+    /* Nav */
+
+    .nav__link {
+        margin: 0 30px;
+    }
+
+    .button {
+        margin: 0 50px;
+    }
+
+    /* Flights */
+
+    .flights__name {
+        font-size: 60px;
+    }
+
+    /* Comments */
+
+    .comments {
+        height: 100%;
+    }
+
+    .comments__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .comments__item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .comments__item:last-child {
+        margin-right: 0;
+    }
+
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+
+    /* Intro */
+
+    .intro__name {
+        font-size: 65px;
+    }
+
+    /* Nav */
+
+    .nav__link {
+        margin: 0 10px;
+    }
+
+    /* Preview */
+
+    .preview {
+        display: block;
+        height: 500px;
+        padding: 50px 0;
+    }
+
+    .preview__inner {
+        width: 100%;
+    }
+
+    .preview__name {
+        font-size: 60px;
+    }
+
+    /* Story */
+
+    .story {
+        height: 100%;
+        padding: 70px 0;
+    }
+
+    .story__inner {
+        display: block;
+    }
+
+    .story__item {
+        width: 100%;
+    }
+
+    .story__description {
+        margin-bottom: 40px;
+    }
+
+    .story__text {
+        margin-bottom: 30px;
+    }
+
+    /* Flights */
+
+    .flights {
+        height: 100%;
+        padding: 70px 0;
+    }
+
+    .flights__inner {
+        display: block;
+    }
+
+    .flights__item {
+        width: 100%;
+    }
+
+    .flights__img {
+        display: none;
+    }
+
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+    /* Intro */
+
+    .intro {
+        min-height: 650px;
+        height: 100%;
+    }
+
+    .intro__inner {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 150px;
+    }
+
+    .intro__item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .intro__name {
+        margin: 0;
+    }
+
+    .intro__description {
+        margin: 0;
+    }
+
+    .intro__img {
+        display: inline-block;
+    }
+
+    /* Nav */
+
+    .nav {
+        display: none;
+    }
+
+    /* Menu */
+
+    .menu-burger__header {
+        display: block;
+    }
+
+    .button {
+        margin: 0;
+    }
+
+    /* Memories  */
+
+    .memories__name {
+        font-size: 45px;
+    }
+
+    /* Gallery */
+
+    .gallery {
+        padding: 90px 0 20px;
+    }
+
+    .gallery__inner {
+        display: block;
+    }
+
+    .gallery__item {
+        width: 100%;
+    }
+
+    .gallery__name {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .gallery__img {
+        margin-bottom: 20px;
+    }
+
+    .gallery__name:before {
+        margin-bottom: 20px;
+    }
+
+    .gallery__description {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #515758;
+    }
+
+    /* Places */
+
+    .places {
+        padding-bottom: 30px;
+    }
+
+    .places__inner {
+        display: block;
+    }
+
+    .places__item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .place__description {
+        display: block;
+    }
+
+    /* Comments */
+
+    .comments {
+        padding: 70px 0;
+    }
+
+    .comments__name {
+        width: 100%;
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    /* Intro */
+
+    .intro__name {
+        font-size: 40px;
+    }
+
+    .button {
+        padding: 10px 30px;
+    }
+
+    .intro__button {
+        padding: 10px 30px;
+    }
+
+    /* Memories  */
+
+    .memories {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .memories__inner {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .memories__name {
+        font-size: 30px;
+    }
+
+    .memories__description {
+        font-size: 15px;
+    }
+
+    .memories__button {
+        padding: 10px 30px;
+    }
+
+    /* Comments */
+
+    .comments__item {
+        margin-right: 0;
+    }
+}
